@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Medication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1><div>Add Medication</div></h1>
+        
+        <div class="form-box">
+            <form method="post">
+                <div>
+                    <label for="med_name">Medication Name</label>
+                    <input type="text" id="med_name" name="med_name" required>
+                </div>
+                <div>
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category">
+                </div>
+                <div>
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" required>
+                </div>
+                <div>
+                    <label for="expiry_date">Expiry Date</label>
+                    <input type="date" id="expiry_date" name="expiry_date" required>
+                </div>
+                <div>
+                    <button type="submit" class="submit-button">Add Medication</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="button-box">
+            <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

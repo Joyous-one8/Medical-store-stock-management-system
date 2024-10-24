@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Store Stock Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Medical Store Stock Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('add_medication') }}">Add Medication</a></li>
+                <li><a href="{{ url_for('add_supplier') }}">Add Supplier</a></li>
+                <li><a href="{{ url_for('update_inventory') }}">Update Inventory</a></li>
+                <li><a href="{{ url_for('check_stock') }}">Check Stock</a></li>
+                <li><a href="{{ url_for('generate_alerts') }}">Generate Alerts</a></li>
+                <li><a href="{{ url_for('record_sale') }}">Record Sale</a></li>
+                <li><a href="{{ url_for('place_order') }}">Place Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

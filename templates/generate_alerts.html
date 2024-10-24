@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Alerts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Alerts</h1>
+        
+        {% if alerts %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Expiry Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for alert in alerts %}
+                <tr>
+                    <td>{{ alert[0] }}</td>
+                    <td>{{ alert[1] }}</td>
+                    <td>{{ alert[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No alerts to display.</p>
+        {% endif %}
+        
+        <div class="button-box">
+            <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

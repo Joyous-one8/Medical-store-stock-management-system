@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Place Order</h1>
+        
+        <div class="form-box">
+            <form method="post">
+                <div>
+                    <label for="supplier_id">Supplier ID</label>
+                    <input type="number" id="supplier_id" name="supplier_id" required>
+                </div>
+                <div>
+                    <label for="med_id">Medication ID</label>
+                    <input type="number" id="med_id" name="med_id" required>
+                </div>
+                <div>
+                    <label for="quantity_ordered">Quantity Ordered</label>
+                    <input type="number" id="quantity_ordered" name="quantity_ordered" required>
+                </div>
+                <div>
+                    <button type="submit" class="submit-button">Place Order</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="button-box">
+            <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
